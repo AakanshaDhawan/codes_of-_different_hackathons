@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int n,i=0,j;
+    cin >> n;
+    vector<int> ar(n);
+    vector<int> ar1(100);
+    for(int ar_i = 0; ar_i < n; ar_i++){
+       cin >> ar[ar_i];
+       ar1[ar[ar_i]]= ar1[ar[ar_i]]+1;
+      // cout<<ar1[ar[ar_i]]<<endl;
+    }
+    for(int ar_i = 0; ar_i < 100; ar_i++){
+        if(ar1[ar_i]!=0)
+        {
+            if(ar1[ar_i]%2==0)
+                 i=i+ar1[ar_i]/2;
+            else
+            {
+                j=ar1[ar_i]/2;
+                i=i+j;
+            }
+        }
+    }
+    cout << i << endl;
+    return 0;
+}
