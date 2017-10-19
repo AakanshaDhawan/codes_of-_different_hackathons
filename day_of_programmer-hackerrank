@@ -20,7 +20,7 @@ void solve(int y){
     }
     else if (y==1918)
     {
-        dd=27;
+        dd=26;
         mm=9;
     }
     else
