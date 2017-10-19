@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void bonAppetit(int n, int k, int b, vector <int> ar) {
+    // Complete this function
+    int i,sum=0;
+    int half;
+    for(i=0;i<ar.size();i++)
+    {
+        if(i==k)
+            sum=sum;
+        else
+            sum=sum+ar[i];
+       // cout<<sum<<endl;
+    }
+    //cout<<sum;
+    half=sum/2;
+    //cout<<half;
+    if(half==b)
+        cout<<"Bon Appetit";
+    else
+        cout<<b-half;
+}
+
+int main() {
+    int n;
+    int k;
+    cin >> n >> k;
+    vector<int> ar(n);
+    for(int ar_i = 0; ar_i < n; ar_i++){
+       cin >> ar[ar_i];
+    }
+    int b;
+    cin >> b;
+    bonAppetit(n, k, b, ar);
+    
+    return 0;
+}
