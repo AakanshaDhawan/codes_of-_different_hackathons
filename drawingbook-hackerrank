@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int solve(int n, int p){
+    // Complete this function
+    int i,j,k=1,l=n,a=0;
+    for(i=1;i<=n;i++)
+    {
+        k=k+2;
+        if(k>p)
+            break;
+        
+    }
+    for(j=n;j>=1;j++)
+    {
+       
+        l=l-2;
+        
+       if(l<=p)
+           break;
+        a++;
+    }
+    //cout<<i<<" "<<a;
+    if(i>a)
+        return a;
+    else
+        return i;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    int p;
+    cin >> p;
+    int result = solve(n, p);
+    cout << result << endl;
+    return 0;
+}
